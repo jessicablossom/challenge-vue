@@ -41,9 +41,9 @@ div .card {
   justify-content: space-evenly;
   background-color: #ffffff;
   border-radius: 3px;
-  box-shadow: 5px 5px 5px 0px #00000008 ;
+  box-shadow: 5px 5px 5px 0px #00000008;
   margin-bottom: 30px;
-  margin-right: 2px;;
+  margin-right: 2px;
   padding: 10px;
   width: 180px;
   height: auto;
@@ -53,14 +53,13 @@ div .card {
   background: #ffffff;
   border: 1px solid #0070e0;
   color: #0070e0;
-  }
+}
 
 .secondary:hover {
   background-color: #0070e0;
   border: 1px solid transparent;
   color: #ffffff;
 }
-
 </style>
 
 

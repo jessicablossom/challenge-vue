@@ -1,35 +1,38 @@
 <template>
   <div id="app">
-    <Navbar/>
+    <Navbar />
     <h1>Almacén</h1>
-   <Items v-bind:items="items" />
-   <LoadMore/>
-   <p>aca van mas productos</p>
+    <Items v-bind:items="items" />
+    <LoadMore />
+    <p>aca van mas productos</p>
   </div>
 </template>
 
 <script>
-import Items from './components/Items';
-import Navbar from './components/Navbar';
-import LoadMore from './components/LoadMore';
-import axios from 'axios';
+import Items from "./components/Items";
+import Navbar from "./components/Navbar";
+import LoadMore from "./components/LoadMore";
+import axios from "axios";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    Items, Navbar, LoadMore
+    Items,
+    Navbar,
+    LoadMore,
   },
-  data(){
+  data() {
     return {
-      items: []
-    }
+      items: [],
+    };
   },
   created() {
-    axios.get('https://challenge-api.aerolab.co/products')
-      .then(res => this.items = res.data.products)
-      .catch(err => console.log(err))
-  }
-}
+    axios
+      .get("https://challenge-api.aerolab.co/products")
+      .then((res) => (this.items = res.data.products))
+      .catch((err) => console.log(err));
+  },
+};
 </script>
 
 <style>
@@ -38,13 +41,12 @@ export default {
   color: #2c3e50;
   text-align: center;
   background: rgba(0, 0, 0, 0.05);
-
 }
 h1 {
-font-size: 24px;
-letter-spacing: 0;
-text-align: left;
-margin:10px;
+  font-size: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  margin: 10px;
 }
 .btn {
   border-radius: 3px;
@@ -59,15 +61,14 @@ margin:10px;
   top: 1px;
 }
 
-.primary{
+.primary {
   background: #0070e0;
   border: 1px solid #0070e0;
   color: #ffffff;
 }
-.primary:hover{
+.primary:hover {
   background: #ffffff;
   border: 1px solid #0070e0;
   color: #0070e0;
 }
-
 </style>
